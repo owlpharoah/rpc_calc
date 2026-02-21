@@ -1,0 +1,15 @@
+syntax = "proto3";
+package calculator;
+
+service Adder{
+  rpc Add (Operands) returns (Answer);
+}
+
+message Operands{
+  double num1=1;
+  double num2=2;
+}
+
+message Answer{
+  double ans=1;
+}
